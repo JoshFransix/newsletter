@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
   transition: all .3s ease-in-out;
 }
 
 .container {
   height: 100vh;
+  overflow: hidden;
   width: 100%;
   display: grid;
   grid-template-columns: 45% 55%;
@@ -24,10 +24,12 @@
 
 .content-left h1 {
   font-family: 'IM Fell French Canon', serif;
-  font-size: 56px;
+  font-size: 330%;
   color: #00237b;
   margin-bottom: 2rem;
   width: 80%;
+  z-index: 1;
+
 }
 
 .content-left .bottom-content img {
@@ -93,7 +95,7 @@
 }
 
 .content-right h1 {
-  font-size: 47px;
+  font-size: 270%;
   font-weight: bolder;
 }
 
@@ -153,4 +155,145 @@
   width: 20%;
   font-size: 13px;
   cursor: pointer;
+}
+
+@media screen and (max-width:1264px) {
+  .content-left h1 {
+    font-size: 300%;
+  }
+
+  .content-left .bottom-content img {
+    display: none;
+    left: -4%;
+  }
+
+  .connect-links div {
+    margin-bottom: 1rem;
+  }
+
+  .container .content-left::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 0%;
+    width: 50%;
+    height: 50%;
+    opacity: 0.9;
+    background: url('./img/landing.svg') no-repeat center center/cover;
+  }
+
+  .content-left .bottom-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .connect-links {
+    right: -30%;
+    top: 10%;
+  }
+
+  .content-right h1 {
+    font-size: 220%;
+  }
+
+  #form input,
+  #form select {
+    padding: 1rem 2rem;
+  }
+
+  #button {
+    padding: 1rem 1rem;
+    margin-top: 2rem;
+    border-radius: 70px;
+    width: 20%;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .content-left::after {
+    display: none;
+    background: url('./img/landing.svg') no-repeat center center/cover;
+  }
+
+  .content-left h1 {
+    text-align: center;
+    width: 100%;
+  }
+
+
+  .connect-links {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    right: 0%;
+    top: 0%;
+  }
+
+  .connect-links div {
+    margin-bottom: 0rem;
+  }
+
+  .connect-links p {
+    width: 80%;
+  }
+
+  .container .content-left {
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .container .content-left .bottom-content {
+    position: relative;
+    padding: 0;
+    height: 100%;
+  }
+
+  .content-right {
+    height: 100%;
+    text-align: center;
+  }
+
+  .content-right h1,
+  .content-left h1 {
+    font-size: 170%;
+  }
+
+  #button {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width:429px) {
+  .container {
+    overflow: auto;
+  }
+
+  .connect-links {
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    right: 0%;
+    top: 0%;
+  }
+
+  .connect-links div {
+    margin-bottom: 1rem;
+  }
+
+  .content-right h1,
+  .content-left h1 {
+    font-size: 140%;
+  }
+
+  .content-right {
+    padding: 2rem 0rem;
+  }
 }
