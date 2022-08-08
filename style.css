@@ -38,7 +38,7 @@
   left: -10%;
   width: 70%;
   height: 80%;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .connect-links {
@@ -179,7 +179,7 @@
     width: 50%;
     height: 50%;
     opacity: 0.9;
-    background: url('./img/landing.svg') no-repeat center center/cover;
+    background: url('https://ibloov-newsletter.netlify.app/landing.svg') no-repeat center center/cover;
   }
 
   .content-left .bottom-content {
@@ -219,7 +219,7 @@
 
   .container .content-left::after {
     display: none;
-    background: url('./img/landing.svg') no-repeat center center/cover;
+    background: url('https://ibloov-newsletter.netlify.app/landing.svg') no-repeat center center/cover;
   }
 
   .content-left h1 {
